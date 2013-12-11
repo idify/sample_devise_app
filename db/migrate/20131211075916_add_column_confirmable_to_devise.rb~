@@ -1,0 +1,4 @@
+class AddColumnConfirmableToDevise < ActiveRecord::Migration
+  def change
+  end
+end

@@ -1,0 +1,4 @@
+class AddOmniouthToDevise < ActiveRecord::Migration
+  def change
+  end
+end
