@@ -1,2 +1,0 @@
-class OmniauthCallbacksControllergmailController < ApplicationController
-end
