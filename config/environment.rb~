@@ -14,5 +14,5 @@ ActionMailer::Base.smtp_settings =
 :authentication => "plain",
 :enable_starttls_auto => true
 }
-#ENV['TWITTER_KEY'] = 'OZOCbpP8qJqr4tufH88pSg'
-#ENV['TWITTER_SECRET'] = 'NU4S1DsmTcNbBJggdHwtu86J0rio536tzrcwgOz4lM'
+ENV['TWITTER_KEY'] = 'OZOCbpP8qJqr4tufH88pSg'
+ENV['TWITTER_SECRET'] = 'NU4S1DsmTcNbBJggdHwtu86J0rio536tzrcwgOz4lM'
