@@ -10,8 +10,10 @@ gem 'therubyracer'
 gem 'execjs'
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-facebook'
-
+gem 'omniauth-facebook'#for facebook
+gem 'omniauth-google-oauth2'#for google
+gem 'omniauth-google-apps' #for gmail
+gem 'omniauth-twitter' #twitter
 
 # Gems used only for assets and not required
 # in production environments by default.

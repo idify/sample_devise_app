@@ -1,0 +1,2 @@
+class OmniauthCallbacksgoogleController < ApplicationController
+end

@@ -1,11 +1,25 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+
+  config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+
+
+
+
+
+
+# for gmail 
+require 'openid/store/filesystem'
+config.omniauth :google_apps, :store => OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = '20d9cdfdf3c6c7327d2dca9cc563987844f1901fea770e6e2d9f791c9fa5d7f2a8892e5f54e1b1b5e9976179d8b5005a94143b42806a7aa1b26f701f94ad6e91'
 #config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+
+#for facebook account
 require "omniauth-facebook"
 #config.omniauth :facebook, "APP_ID", "APP_SECRET"
 config.omniauth :facebook, "561221117304359", "b16a1c14eb52aad5341247ef20bc319a", :strategy_class => OmniAuth::Strategies::Facebook
@@ -13,6 +27,11 @@ config.omniauth :facebook, "561221117304359", "b16a1c14eb52aad5341247ef20bc319a"
 
 config.omniauth :facebook, "561221117304359", "b16a1c14eb52aad5341247ef20bc319a",
       :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
+
+
+#for google account
+require "omniauth-google-oauth2"
+config.omniauth :google_oauth2, "200561141559.apps.googleusercontent.com", "SlN_of3rJaXpR3iBtrdgUmDa", { access_type: "offline", approval_prompt: "" }
 
 
   # Configure the e-mail address which will be shown in Devise::Mailer,

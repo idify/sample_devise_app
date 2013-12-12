@@ -9,7 +9,10 @@ gem 'pg'
 gem 'therubyracer'
 gem 'execjs'
 gem 'devise'
-gem 'omniauth-github'
+gem 'omniauth'
+gem 'omniauth-facebook'#for facebook
+gem 'omniauth-google-oauth2'#for google
+gem 'omniauth-google-apps' #for gmail
 
 
 # Gems used only for assets and not required
